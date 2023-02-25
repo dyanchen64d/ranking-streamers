@@ -6,16 +6,16 @@ const useGetList = (data) => {
 
   const update = () => {
     const mock = [...list];
-    mock[0].score += 10;
-    // console.log('update', mock);
-
+    const len = list.length;
+    const idx = Math.floor(Math.random() * len);
+    mock[idx].score += 10;
     setList(mock);
   };
 
   useEffect(() => {
     timer.current = setInterval(() => {
       update();
-    }, 1000 * 3);
+    }, 1000 * 2);
 
     return () => {
       clearInterval(timer.current);
