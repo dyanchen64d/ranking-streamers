@@ -28,10 +28,6 @@ const useIncrement = (min, max) => {
     }, 50);
   }, [update]);
 
-  useEffect(() => {
-    console.log('updating', updating);
-  }, [updating]);
-
   return { show, updating };
 };
 
