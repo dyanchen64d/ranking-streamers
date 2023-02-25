@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Score from './Score';
 
 const RankStreamer = ({ data }) => {
   const [list, setList] = useState(data);
@@ -26,7 +27,7 @@ const RankStreamer = ({ data }) => {
           >
             <div>{idx + 1}</div>
             <div>{item.name}</div>
-            <div>{item.score}</div>
+            <Score score={item.score} />
           </div>
         );
       })}

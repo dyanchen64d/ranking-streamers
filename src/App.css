@@ -20,5 +20,12 @@
   position: absolute;
   left: 0;
   top: 0;
-  transition: top 0.5s;
+  transition: all 0.5s;
+}
+
+.updating {
+  color: red;
+  border-width: bold;
+  transform: scale(1.5);
+  transition: all 0.5s;
 }
